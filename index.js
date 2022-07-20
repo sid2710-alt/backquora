@@ -36,8 +36,7 @@ app.get("*", (req, res) => {
     res.send("Oops! unexpected error");
   }
 });
-
-app.use(cors());
+app.use(cors({origin: true}));
 
 //server listening
 app.listen( PORT, () => {
